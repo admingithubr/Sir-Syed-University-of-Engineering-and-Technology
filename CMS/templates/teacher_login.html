@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Login</title>
+</head>
+<body>
+    <h2>Teacher Login</h2>
+    <form method="post">
+        <label>Teacher ID:</label><br>
+        <input type="text" name="username" required><br><br>
+        <label>Password:</label><br>
+        <input type="password" name="password" required><br><br>
+        <button type="submit">Login</button>
+    </form>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <p style="color: rgb(56, 100, 221);">{{ messages[0] }}</p>
+      {% endif %}
+    {% endwith %}
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>
