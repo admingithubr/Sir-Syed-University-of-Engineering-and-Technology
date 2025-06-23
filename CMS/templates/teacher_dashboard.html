@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Dashboard</title>
+</head>
+<body>
+    <h2>Teacher Dashboard</h2>
+    <form method="post">
+        <label>Student ID:</label><br>
+        <input type="text" name="sid" required><br><br>
+        <label>Data Type:</label><br>
+        <select name="field">
+            <option value="result">Result</option>
+            <option value="attendance">Attendance</option>
+        </select><br><br>
+        <label>Value:</label><br>
+        <input type="text" name="value" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <p style="color: green;">{{ messages[0] }}</p>
+      {% endif %}
+    {% endwith %}
+    <p><a href="/logout">Logout</a></p>
+</body>
+</html>
